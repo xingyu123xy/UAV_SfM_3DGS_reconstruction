@@ -1,9 +1,11 @@
 # UAV_SfM_3DGS_reconstruction
 UAV aerial 3D reconstruction based on SfM + 3DGS, including camera pose conversion and CUDA rendering optimization for drone surveying scenes. 基于SfM+3DGS的无人机航拍三维重建，包含相机位姿格式转换与面向航测场景的CUDA渲染性能优化。
 UAV_SfM_3DGS_reconstruction
+
 项目简介
 本项目面向无人机倾斜摄影测绘场景，设计一套「SfM空三解算+3DGS隐式重建」完整管线。针对航拍大场景存在显存占用过高、植被/建筑立面弱纹理空洞、推理速度慢等痛点，基于CUDA完成渲染算子轻量化优化。
 整体技术链路：航拍影像GPS辅助SfM稀疏重建 → C++位姿格式转换 → 3D高斯泼溅神经重建 → GPU并行加速推理。
+
 技术栈
 C++、CUDA C、Python
 COLMAP、Nerfstudio、SfM-MVS多视图几何、PCL、OpenCV
