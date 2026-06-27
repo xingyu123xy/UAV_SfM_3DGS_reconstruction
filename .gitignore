@@ -121,7 +121,7 @@ ipython_config.py
 #   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
 # pixi.lock
 #   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
-#   in the .venv directory. It is recommended not to include this directory in version control.
+#   in the .vscode directory. It is recommended not to include this directory in version control.
 .pixi
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
@@ -181,32 +181,23 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# PyCharm
-#   JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#   be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#   and can be added to the global gitignore or merged into this file.  For a more nuclear
-#   option (not recommended) you can uncomment the following to ignore the entire idea folder.
-# .idea/
-
-# Abstra
-#   Abstra is an AI-powered process automation framework.
-#   Ignore directories containing user credentials, local state, and settings.
-#   Learn more at https://abstra.io/docs
-.abstra/
+# PyCharm JetBrains IDE
+.idea/
+*.iml
+cmake-build-*/
+out/
 
 # Visual Studio Code
-#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
-#   that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#   and can be added to the global gitignore or merged into this file. However, if you prefer, 
-#   you could uncomment the following to ignore the entire vscode folder
-# .vscode/
-# Temporary file for partial code execution
+.vscode/
 tempCodeRunnerFile.py
 
-# Ruff stuff:
+# Abstra
+.abstra/
+
+# Ruff cache
 .ruff_cache/
 
-# PyPI configuration file
+# PyPI config
 .pypirc
 
 # Marimo
@@ -216,3 +207,41 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ====================== 新增：C++ / CMake / CUDA 编译产物 ======================
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.cu.o
+cmake-build-debug/
+cmake-build-release/
+cmake-build-relwithdebinfo/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+install_manifest.txt
+
+# 原始航拍影像、点云、网格、模型权重
+*.ply
+*.obj
+*.bin
+*.las
+*.laz
+*.pth
+*.ckpt
+*.splat
+data/raw/
+results/trained_models/
+results/dense_point_cloud/
+results/mesh_output/
+
+# 本地运行日志、缓存
+*.log
+*.out
+cache/
+tmp/
+temp/
