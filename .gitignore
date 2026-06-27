@@ -208,7 +208,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# ====================== 新增：C++ / CMake / CUDA 编译产物 ======================
 *.o
 *.obj
 *.so
